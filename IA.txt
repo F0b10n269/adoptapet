@@ -1,3 +1,7 @@
 Prompt 1: Un refugio de animales quiere reemplazar su mural impreso por un directorio digital interactivo de mascotas en adopcion, exhibido en una pantalla de la recepcion, el equipo del refugio te entrega el listado de mascotas (mascotas.js) y te pide una aplicacion Web SPA en React, simple, ordenada y seguro, que permita ver las mascotas, distinguir su especie y resaltar los casos de adopcion urgente.
 Evalucacion: El Resultado fue util,ya que logro hacer un directorio interactivo y ordenada que muestra las mascotas clasificadas por especie y resaltar los casos urgentes, aunque hay un pequeño detalle a mejorar
-Modificacion: la moificacion para resolver el pequeño error lo resolvere con el siguiente Prompt
+Modificacion: aun no se modifica nada 
+
+Prompt 2: entrega valores por defecto para evitar errores cuando falte un dato, renderiza el texto siempre como contenido JSX normal, no uses dangerouslySetlnnerHTML y no dejes credenciales, ni claves ni datos sensibles escritos en el codigo
+Evalucacion: se agrego los valores por defecto para nombre, raza, especie, descripcion, caracteristicas y adopcion urgente, maneja edad ausente con texto seguro, y evita cualquier use de dangerouslySetlnnerHTMLy no se agrego informacion sensibles ni credenciales
+Modificacion: aun nos corrige nada del codigo

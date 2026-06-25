@@ -1,6 +1,6 @@
 import MascotaCard from './mascotaCard'
 
-export default function ListaMascotas({ mascotas }) {
+export default function ListaMascotas({ mascotas = [] }) {
   if (!mascotas.length) {
     return (
       <div className="empty-state">
@@ -12,7 +12,7 @@ export default function ListaMascotas({ mascotas }) {
   return (
     <section className="mascota-grid" aria-live="polite">
       {mascotas.map((mascota) => (
-        <MascotaCard key={mascota.id} mascota={mascota} />
+        <MascotaCard key={mascota?.id ?? mascota?.nombre ?? 'mascota'} mascota={mascota} />
       ))}
     </section>
   )

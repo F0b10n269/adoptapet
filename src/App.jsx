@@ -7,25 +7,27 @@ import './App.css'
 const TODOS = 'Todos'
 
 function App() {
+  const mascotasData = Array.isArray(mascotas) ? mascotas : []
+
   const especies = useMemo(() => {
-    const lista = Array.from(new Set(mascotas.map((item) => item.especie))).sort()
+    const lista = Array.from(new Set(mascotasData.map((item) => item?.especie || 'No especificado'))).sort()
     return [TODOS, ...lista]
-  }, [])
+  }, [mascotasData])
 
   const [especieSeleccionada, setEspecieSeleccionada] = useState(TODOS)
   const [mostrarSoloUrgentes, setMostrarSoloUrgentes] = useState(false)
 
   const mascotasFiltradas = useMemo(
     () =>
-      mascotas.filter((mascota) => {
-        const coincideEspecie = especieSeleccionada === TODOS || mascota.especie === especieSeleccionada
-        const coincideUrgente = !mostrarSoloUrgentes || mascota.adopcionUrgente
+      mascotasData.filter((mascota) => {
+        const coincideEspecie = especieSeleccionada === TODOS || mascota?.especie === especieSeleccionada
+        const coincideUrgente = !mostrarSoloUrgentes || mascota?.adopcionUrgente
         return coincideEspecie && coincideUrgente
       }),
-    [especieSeleccionada, mostrarSoloUrgentes],
+    [especieSeleccionada, mostrarSoloUrgentes, mascotasData],
   )
 
-  const urgentesTotales = mascotas.filter((mascota) => mascota.adopcionUrgente).length
+  const urgentesTotales = mascotasData.filter((mascota) => mascota?.adopcionUrgente).length
 
   return (
     <main className="app-shell">

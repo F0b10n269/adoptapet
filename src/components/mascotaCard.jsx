@@ -1,5 +1,15 @@
 export default function MascotaCard({ mascota }) {
-  const { nombre, raza, edad, especie, descripcion, caracteristicas, adopcionUrgente } = mascota
+  const {
+    nombre = 'Mascota sin nombre',
+    raza = 'Sin información',
+    edad = null,
+    especie = 'No especificado',
+    descripcion = 'Descripción no disponible.',
+    caracteristicas = [],
+    adopcionUrgente = false,
+  } = mascota || {}
+
+  const edadTexto = typeof edad === 'number' ? `${edad} ${edad === 1 ? 'año' : 'años'}` : 'Edad no disponible'
 
   return (
     <article className={`card ${adopcionUrgente ? 'urgente' : ''}`}>
@@ -20,14 +30,18 @@ export default function MascotaCard({ mascota }) {
         </div>
         <div>
           <dt>Edad</dt>
-          <dd>{edad} {edad === 1 ? 'año' : 'años'}</dd>
+          <dd>{edadTexto}</dd>
         </div>
       </dl>
 
       <ul className="caracteristicas">
-        {caracteristicas.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
+        {Array.isArray(caracteristicas) && caracteristicas.length > 0 ? (
+          caracteristicas.map((item) => (
+            <li key={item}>{item}</li>
+          ))
+        ) : (
+          <li>Sin características registradas</li>
+        )}
       </ul>
     </article>
   )
