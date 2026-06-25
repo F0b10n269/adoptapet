@@ -1,0 +1,14 @@
+export const mascotas = [
+    { id: 1,  nombre: "Pelusa",   raza: "Mestizo",            edad: 2, especie: "Perro", descripcion: "Cachorro juguetón y sociable, rescatado de la calle.", caracteristicas: ["vacunado", "esterilizado", "sociable"],   adopcionUrgente: false },
+    { id: 2,  nombre: "Michi",    raza: "Siamés",             edad: 3, especie: "Gato",  descripcion: "Gata tranquila que disfruta de los lugares cálidos.",  caracteristicas: ["vacunada", "tímida", "limpia"],          adopcionUrgente: false },
+    { id: 3,  nombre: "Rocky",    raza: "Labrador",           edad: 5, especie: "Perro", descripcion: "Perro grande y noble, ideal para familias activas.",  caracteristicas: ["vacunado", "entrenado", "juguetón"],     adopcionUrgente: true },
+    { id: 4,  nombre: "Nina",     raza: "Conejo Belier",      edad: 1, especie: "Otro",  descripcion: "Coneja dócil que necesita un hogar tranquilo.",        caracteristicas: ["sana", "pequeña", "dócil"],              adopcionUrgente: false },
+    { id: 5,  nombre: "Toby",     raza: "Quiltro",            edad: 7, especie: "Perro", descripcion: "Perro adulto muy cariñoso que busca un hogar definitivo.", caracteristicas: ["vacunado", "esterilizado", "tranquilo"], adopcionUrgente: true },
+    { id: 6,  nombre: "Luna",     raza: "Persa",              edad: 4, especie: "Gato",  descripcion: "Gata de pelo largo que requiere cuidados frecuentes.", caracteristicas: ["vacunada", "cariñosa", "casera"],        adopcionUrgente: false },
+    { id: 7,  nombre: "Max",      raza: "Pastor Alemán",      edad: 2, especie: "Perro", descripcion: "Perro guardián, atento y muy leal.",                  caracteristicas: ["vacunado", "protector", "activo"],       adopcionUrgente: false },
+    { id: 8,  nombre: "Coco",     raza: "Cacatúa",            edad: 6, especie: "Otro",  descripcion: "Ave sociable que disfruta la compañía de las personas.", caracteristicas: ["sana", "ruidosa", "sociable"],         adopcionUrgente: false },
+    { id: 9,  nombre: "Simba",    raza: "Naranjo común",      edad: 1, especie: "Gato",  descripcion: "Gatito enérgico que necesita espacio para jugar.",     caracteristicas: ["vacunado", "juguetón", "curioso"],       adopcionUrgente: true },
+    { id: 10, nombre: "Bella",    raza: "Beagle",             edad: 3, especie: "Perro", descripcion: "Perra de olfato fino, alegre y muy comunicativa.",     caracteristicas: ["vacunada", "esterilizada", "amigable"],  adopcionUrgente: false },
+    { id: 11, nombre: "Kira",     raza: "Mestiza",            edad: 8, especie: "Gato",  descripcion: "Gata mayor y serena que merece un retiro tranquilo.",  caracteristicas: ["vacunada", "calmada", "independiente"],  adopcionUrgente: true },
+    { id: 12, nombre: "Tambor",   raza: "Hámster sirio",      edad: 1, especie: "Otro",  descripcion: "Pequeño roedor activo durante la noche.",              caracteristicas: ["sano", "pequeño", "nocturno"],           adopcionUrgente: false }
+  ];
