@@ -16,15 +16,19 @@ function App() {
 
   const [especieSeleccionada, setEspecieSeleccionada] = useState(TODOS)
   const [mostrarSoloUrgentes, setMostrarSoloUrgentes] = useState(false)
+  const [textoBusqueda, setTextoBusqueda] = useState('')
 
   const mascotasFiltradas = useMemo(
     () =>
       mascotasData.filter((mascota) => {
         const coincideEspecie = especieSeleccionada === TODOS || mascota?.especie === especieSeleccionada
         const coincideUrgente = !mostrarSoloUrgentes || mascota?.adopcionUrgente
-        return coincideEspecie && coincideUrgente
+        const nombreMascota = String(mascota?.nombre ?? '').toLowerCase()
+        const texto = textoBusqueda.trim().toLowerCase()
+        const coincideBusqueda = !texto || nombreMascota.includes(texto)
+        return coincideEspecie && coincideUrgente && coincideBusqueda
       }),
-    [especieSeleccionada, mostrarSoloUrgentes, mascotasData],
+    [especieSeleccionada, mostrarSoloUrgentes, textoBusqueda, mascotasData],
   )
 
   const urgentesTotales = mascotasData.filter((mascota) => mascota?.adopcionUrgente).length
@@ -53,6 +57,19 @@ function App() {
       </header>
 
       <section className="controls">
+        <div className="search-box">
+          <label htmlFor="busqueda-mascota" className="filter-title">
+            Buscar por nombre
+          </label>
+          <input
+            id="busqueda-mascota"
+            type="text"
+            value={textoBusqueda}
+            onChange={(event) => setTextoBusqueda(event.target.value)}
+            placeholder="Escribe el nombre de la mascota"
+          />
+        </div>
+
         <FiltroEspecie
           especies={especies}
           especieSeleccionada={especieSeleccionada}
@@ -80,7 +97,13 @@ function App() {
         )}
       </section>
 
-      <ListaMascotas mascotas={mascotasFiltradas} />
+      {mascotasFiltradas.length === 0 ? (
+        <div className="empty-state">
+          <p>No hay mascotas que coincidan.</p>
+        </div>
+      ) : (
+        <ListaMascotas mascotas={mascotasFiltradas} />
+      )}
     </main>
   )
 }

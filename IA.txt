@@ -9,3 +9,7 @@ Modificacion: aun nos corrige nada del codigo
 promp 3: manteniendo el codigo actual, recorre array con map() y renderiza un mascotaCard por cada mascota, asigna correctamente la prop key usando el id de cada elemento (no uses el indice del array)
 Evaluacion:el Resultado fue util, ya que ahora ListaMascotas.jsx renderiza con mascotas.map y key=(mascota.id) y no se utiliza el indice del array.
 Modificacion: aun no se modifica nada del codigo
+
+Prompt 4: en app.jsx usa useState para guardar el filtro seleccionado y un campo de busqueda por nombre, aplica ambos filtros sobre el array antes de pasarlo a ListaMascotas, usa renderizado condicional para mostrar el mensaje "no hay mascotas que coincidan" cuando el resultado que vacio
+Evaluacion: el resultado fue util ya que el proyecto compila correctamente con la búsqueda por nombre y el filtro aplicado antes del renderizado de ListaMascotas.
+Modificacion: aun no se modifica el codigo
