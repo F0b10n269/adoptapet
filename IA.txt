@@ -3,5 +3,9 @@ Evalucacion: El Resultado fue util,ya que logro hacer un directorio interactivo 
 Modificacion: aun no se modifica nada 
 
 Prompt 2: entrega valores por defecto para evitar errores cuando falte un dato, renderiza el texto siempre como contenido JSX normal, no uses dangerouslySetlnnerHTML y no dejes credenciales, ni claves ni datos sensibles escritos en el codigo
-Evalucacion: se agrego los valores por defecto para nombre, raza, especie, descripcion, caracteristicas y adopcion urgente, maneja edad ausente con texto seguro, y evita cualquier use de dangerouslySetlnnerHTMLy no se agrego informacion sensibles ni credenciales
+Evalucacion: el Resultado fue util, ya que se agrego los valores por defecto para nombre, raza, especie, descripcion, caracteristicas y adopcion urgente, maneja edad ausente con texto seguro, y evita cualquier use de dangerouslySetlnnerHTMLy no se agrego informacion sensibles ni credenciales
 Modificacion: aun nos corrige nada del codigo
+
+promp 3: manteniendo el codigo actual, recorre array con map() y renderiza un mascotaCard por cada mascota, asigna correctamente la prop key usando el id de cada elemento (no uses el indice del array)
+Evaluacion:el Resultado fue util, ya que ahora ListaMascotas.jsx renderiza con mascotas.map y key=(mascota.id) y no se utiliza el indice del array.
+Modificacion: aun no se modifica nada del codigo

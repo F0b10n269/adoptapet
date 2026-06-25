@@ -12,7 +12,7 @@ export default function ListaMascotas({ mascotas = [] }) {
   return (
     <section className="mascota-grid" aria-live="polite">
       {mascotas.map((mascota) => (
-        <MascotaCard key={mascota?.id ?? mascota?.nombre ?? 'mascota'} mascota={mascota} />
+        <MascotaCard key={mascota.id} mascota={mascota} />
       ))}
     </section>
   )
